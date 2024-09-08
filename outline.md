@@ -14,13 +14,12 @@
 	+ Dinitz | push-relabel
 	+ Min cost max flow (Johnson)
 	+ maybe some strange algorithms
-- Numerical integration
-	+ Simpson's rule
 - Number theory 
 	+ pollard-rho
 	+ exgcd
 	+ CRT
 - Misc
+	+ Simpson's rule
 	+ fractional binary search
 	+ Mobius function
 	+ some geometry formulas 
