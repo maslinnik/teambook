@@ -1,10 +1,9 @@
 /**
  * Author: Vladimir Ragulin
  * Description: Applies the discrete Fourier transform to a sequence of numbers modulo \texttt{MOD}.
- * Time: $O(n \log n)$.
+ * Time: O(n \log n)
  */
 
-const int MOD = 998244353, ROOT = 3;
 int rev[N], root[N];
 
 void init(int n) {
@@ -34,7 +33,7 @@ void dft(int* f, int n, bool inverse = false) {
         for (int i = 0; i < n; i += (k << 1))
             for (int j = 0; j < k; ++j) {
                 int z = mul(f[i + j + k], root[j + k]);
-                f[i + j + k] = add(f[i + j], MOD - z);
+                f[i + j + k] = sub(f[i + j], z);
                 f[i + j] = add(f[i + j], z);
             }
     if (inverse) {
