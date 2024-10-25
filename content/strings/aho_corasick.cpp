@@ -1,3 +1,9 @@
+/**
+ * Author: Vladimir Ragulin
+ * Description: Builds Aho-Corasick
+ * Time: O(nC)
+ */
+
 const int C = 26;
 struct node {
     int nx[C], first = -1, suff = -1;//, zsuff = -1;
