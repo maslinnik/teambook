@@ -30,8 +30,9 @@
   - [ ] Möbius function
   - [ ] $1^s + 2^s + \dots + n^s$
 - Combinatorics
-  - [ ] Stirling numbers
-  - [ ] Narayana numbers
+  - [x] Stirling numbers
+  - [x] Bell numbers
+  - [x] Narayana numbers
   - [ ] Prüfer code and number of trees
   - [ ] Burnside's lemma
 - Geometry
