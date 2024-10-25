@@ -8,8 +8,7 @@ $$D_n = (n - 1)(D_{n - 1} + D_{n - 2}) = nD_{n - 1} + (-1)^n \approx \frac{n!}{e
 
 
 \section{Burnside's lemma}
-Given a group $G$ of symmetries and a set $\Omega$, the number of elements of $\Omega$ up to symmetry equals
-
+Given a group $G$ of symmetries and a set $\Omega$, the number of elements of $\Omega$ up to symmetry equal
 $$\frac{1}{|G|} \sum_{g \in G} N(g)$$
 where $N(g)$ is the number of elements fixed by $g$ ($g(x) = x$).
 
@@ -26,10 +25,8 @@ $$c_{0, 0} = s_{0, 0} = 1 \quad c_{k, 0} = s_{k, 0} = 0 \quad c_{n, k} = s_{n, k
 $$c_{n, k} = c_{n - 1, k - 1} + (n - 1)c_{n - 1, k}$$
 $$s_{n, k} = s_{n - 1, k - 1} - (n - 1)s_{n - 1, k}$$
 $$s_{n, k} = (-1)^{n + k}c_{n, k}$$
-
-EGF:
-$$\sum_{n = 0}^{\infty}\sum_{k = 0}^{n}s_{n, k}\frac{x^n}{n!}y^k = (1 + x)^y$$
-$$\sum_{n = k}^{\infty}s_{n, k}\frac{x^n}{n!} = \frac{(\log(1 + x))^k}{k!}$$
+$$\text{EGF: } \sum_{n = 0}^{\infty}\sum_{k = 0}^{n}s_{n, k}\frac{x^n}{n!}y^k = (1 + x)^y$$
+$$\text{EGF: } \sum_{n = k}^{\infty}s_{n, k}\frac{x^n}{n!} = \frac{(\log(1 + x))^k}{k!}$$
 
 
 
@@ -40,29 +37,23 @@ The Stirling numbers of the second kind $S(n, k)$, count the number of ways to p
 $$S(n, n) = 1 \text{ for } n \ge 0 \quad S(0, n) = S(n, 0) = 0 \text{ for } n > 0$$
 $$S(n + 1, k) = k \cdot S(n, k) + S(n, k - 1)$$
 $$S(n, k) = \sum_{t = 0}^{k} \frac{(-1)^{k - t}t^n}{(k - t)!t!}$$
-
-EGF:
-$$\sum_{n = 0}^{\infty}\sum_{k=0}^{n} S(n, k)\frac{x^n}{n!}y^k = e^{y(e^x - 1)}$$
-$$\sum_{n = k}^{\infty} S(n, k)\frac{x^n}{n!} = \frac{(e^x - 1)^k}{k!}$$
+$$\text{EGF: } \sum_{n = 0}^{\infty}\sum_{k=0}^{n} S(n, k)\frac{x^n}{n!}y^k = e^{y(e^x - 1)}$$
+$$\text{EGF: } \sum_{n = k}^{\infty} S(n, k)\frac{x^n}{n!} = \frac{(e^x - 1)^k}{k!}$$
 
 
 
 
 \section{Bell numbers}
 Bell number $B_n$ is the number of partitions of $n$ labeled elements.
-
 $$B_0 = B_1 = 1$$
 $$B_n = \sum_{k = 0}^{n - 1} C_n^k B_k = \sum_{k = 0}^{n} S(n, k)$$
-
-EGF:
-$$\sum_{n = 1}^{\infty}\frac{B_n}{n!}x^n = e^{e^x - 1}$$
+$$\text{EGF: } \sum_{n = 1}^{\infty}\frac{B_n}{n!}x^n = e^{e^x - 1}$$
 
 
 
 
 \section{Narayana numbers}
 Narayana number $N(n, k)$ is the number of correct bracket sequences with length $2n$ and exactly $k$ distinct nestings. Also the number of unlabeled ordered rooted trees with $n + 1$ vertices and $k$ leaves.
-
 $$N(n, k) = \frac{1}{n}C_{n}^{k}C_{n}^{k - 1}$$
 
 
