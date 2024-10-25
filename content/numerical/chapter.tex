@@ -1,4 +1,25 @@
 \chapter{Numerical}
+\section{Newton's method}
+	To compute $B = \frac{1}{A}$ modulo $x^m$: define $B_1 = \{inv(A[0])\}$ and $B_{2n} = B_n (2 - A * B_n)$.
+
+
+	To compute $B = \sqrt{A}$ modulo $x^m$: define $B_1 = \{\sqrt{A[0]}\}$ and $B_{2n} = \frac{B_n}{2} + \frac{A}{2B_n}$.
+
+
+	To compute $B = \log (1 + xA)$ modulo $x^m$: $B = \int\frac{(1 + xA)'}{1 + xA}$.
+
+	If $T$ is EGF for some objects then $C = -\log (1 - T) = \sum_{k = 1}^{+\infty} \frac{T^k}{k}$ is EGF for cycles of them.
+
+
+	To compute $B = e^{xA}$ modulo $x^m$: define $B_1 = \{1\}$ and $B_{2n} = B_n(1 + A - \log B_n)$.
+
+	If $T$ is EGF for some objects then $F = e^T = \sum_{k = 0}^{\infty} \frac{T^k}{k!}$ is EGF for their unordered combinations.
+
+	In general case you have equation $P(B, x) = 0$. (f.e. $\log B - A(x) = 0$).
+
+	The transition is $B_{2n - \alpha} = B_n - \frac{P(B, x)}{P_B'(B, x)}$. (if $P_B'(B, x)$ is divisible by $x^\alpha$).
+
+
 
 \kactlimport{fft.cpp}{FFT}
 \kactlimport{berlekamp_massey.cpp}{Berlekamp-Massey}

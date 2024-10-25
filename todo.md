@@ -3,7 +3,7 @@
 - Numerical
   - [x] FFT
   - [x] Berlekamp-Massey
-  - [ ] $1/f$, $e^f$, $\log f$, etc
+  - [x] $1/f$, $e^f$, $\log f$, etc
   - [ ] FFT modulos
   - [ ] Linear recurrence
 - Strings
