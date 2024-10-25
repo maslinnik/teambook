@@ -8,8 +8,8 @@
   - [ ] Linear recurrence
 - Strings
   - [x] Z-function and prefix function
-  - [ ] Suffix array + LCP
-  - [ ] Aho-Corasick
+  - [x] Suffix array + LCP
+  - [x] Aho-Corasick
   - [ ] Suffix automaton
   - [x] Lexicographically minimal string rotation using Lyndon factorization
 - Graphs
