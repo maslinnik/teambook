@@ -32,7 +32,7 @@ void dft(int* f, int n, bool inverse = false) {
         for (int i = 0; i < n; i += (k << 1))
             for (int j = 0; j < k; ++j) {
                 int z = mul(f[i + j + k], root[j + k]);
-                f[i + j + k] = sub(f[i + j], z);
+                f[i + j + k] = add(f[i + j], MOD - z);
                 f[i + j] = add(f[i + j], z);
             }
     if (inverse) {
