@@ -1,0 +1,41 @@
+# To-Do List
+
+- Numerical
+  - [x] FFT
+  - [x] Berlekamp-Massey
+  - [ ] $1/f$, $e^f$, $\log f$, etc
+  - [ ] FFT modulos
+  - [ ] Linear recurrence
+- Strings
+  - [ ] Z-function and prefix function
+  - [ ] Suffix array + LCP
+  - [ ] Aho-Corasick
+  - [ ] Suffix automaton
+  - [ ] Lexicographically minimal string rotation using Lyndon factorization
+- Graphs
+  - [ ] SPFA
+  - [ ] Edmonds' algorithm (arborescence of minimum weight)
+  - [ ] Link-cut tree
+  - [ ] Maximum independent set in $O(2^{n/2})$
+  - [ ] General weighted matching
+- Flows
+  - [x] Dinitz
+  - [x] MCMF (Johnson)
+- Number theory 
+  - [ ] Pollard-Rho
+  - [x] Extended GCD
+  - [x] CRT
+  - [ ] Floor sum
+  - [ ] Möbius function
+  - [ ] $1^s + 2^s + \dots + n^s$
+- Combinatorics
+  - [ ] Stirling numbers
+  - [ ] Narayana numbers
+  - [ ] Prüfer code and number of trees
+  - [ ] Burnside's lemma
+- Geometry
+  - [ ] Something from KACTL
+  - [ ] `inside_circumcircle`
+- Miscellaneous
+	- [x] Simpson's rule
+	- [x] Fractional binary search
