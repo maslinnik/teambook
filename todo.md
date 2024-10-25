@@ -7,11 +7,11 @@
   - [ ] FFT modulos
   - [ ] Linear recurrence
 - Strings
-  - [ ] Z-function and prefix function
+  - [x] Z-function and prefix function
   - [ ] Suffix array + LCP
   - [ ] Aho-Corasick
   - [ ] Suffix automaton
-  - [ ] Lexicographically minimal string rotation using Lyndon factorization
+  - [x] Lexicographically minimal string rotation using Lyndon factorization
 - Graphs
   - [ ] SPFA
   - [ ] Edmonds' algorithm (arborescence of minimum weight)

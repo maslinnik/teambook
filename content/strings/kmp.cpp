@@ -1,10 +1,10 @@
 /**
  * Author: Vladimir Ragulin
- * Description: Prefix-function and Z-function
+ * Description: Calculates prefix function and Z-function of the given string.
  * Time: O(n)
  */
 
-vector<int> Pi(const string& s) {
+vector<int> pi(const string& s) {
 	vector<int> p(sz(s));
 	for (int i = 1; i < sz(s); ++i) {
 		int g = p[i - 1];
@@ -14,7 +14,7 @@ vector<int> Pi(const string& s) {
 	return p;
 }
 
-vector<int> Zf(const string& s) {
+vector<int> zf(const string& s) {
 	vector<int> z(sz(s));
 	int l = -1, r = -1;
 	for (int i = 1; i < sz(s); ++i) {
