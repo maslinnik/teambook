@@ -1,4 +1,22 @@
 \chapter{Combinatorics}
+
+\section{Derangements}
+Number of $n$-permutations that none of the elements appears in their original position.
+$$D_n = (n - 1)(D_{n - 1} + D_{n - 2}) = nD_{n - 1} + (-1)^n \approx \frac{n!}{e}$$
+
+
+
+
+\section{Burnside's lemma}
+Given a group $G$ of symmetries and a set $\Omega$, the number of elements of $\Omega$ up to symmetry equals
+
+$$\frac{1}{|G|} \sum_{g \in G} N(g)$$
+where $N(g)$ is the number of elements fixed by $g$ ($g(x) = x$).
+
+
+
+
+
 \section{Stirling numbers (first kind)}
 Unsigned Stirling numbers of the first kind $c_{n, k}$ is the number of permutations of $n$ elements with $k$ cycles as well as the coefficient on $x^k$ in the expansion $x(x + 1)(x + 2)\dots(x + (n - 1))$.
 
@@ -13,8 +31,10 @@ EGF:
 $$\sum_{n = 0}^{\infty}\sum_{k = 0}^{n}s_{n, k}\frac{x^n}{n!}y^k = (1 + x)^y$$
 $$\sum_{n = k}^{\infty}s_{n, k}\frac{x^n}{n!} = \frac{(\log(1 + x))^k}{k!}$$
 
-\section{Stirling numbers (second kind)}
 
+
+
+\section{Stirling numbers (second kind)}
 The Stirling numbers of the second kind $S(n, k)$, count the number of ways to partition a set of $n$ labelled objects into $k$ nonempty unlabelled subsets.
 
 $$S(n, n) = 1 \text{ for } n \ge 0 \quad S(0, n) = S(n, 0) = 0 \text{ for } n > 0$$
@@ -44,3 +64,14 @@ $$\sum_{n = 1}^{\infty}\frac{B_n}{n!}x^n = e^{e^x - 1}$$
 Narayana number $N(n, k)$ is the number of correct bracket sequences with length $2n$ and exactly $k$ distinct nestings. Also the number of unlabeled ordered rooted trees with $n + 1$ vertices and $k$ leaves.
 
 $$N(n, k) = \frac{1}{n}C_{n}^{k}C_{n}^{k - 1}$$
+
+
+
+\section{Labeled unrooted trees}
+Every tree on $n$ vertices has unique sequence of $n - 2$ integers from $\{1 \dots n\}$ assosiated with the tree.
+
+Vertex with degree $d$ appears in sequence $d - 1$ times.
+
+On $n$ vertices: $n^{n - 2}$.
+
+With degrees $d_1, d_2, \dots, d_n$: $\frac{(n - 2)!}{(d_1 - 1)! \dots (d_n - 1)!}$.

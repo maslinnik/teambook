@@ -30,11 +30,12 @@
   - [ ] Möbius function
   - [ ] $1^s + 2^s + \dots + n^s$
 - Combinatorics
+  - [x] Number of derangements
+  - [x] Burnside's lemma
   - [x] Stirling numbers
   - [x] Bell numbers
   - [x] Narayana numbers
-  - [ ] Prüfer code and number of trees
-  - [ ] Burnside's lemma
+  - [x] Prüfer code and number of trees
 - Geometry
   - [ ] Something from KACTL
   - [ ] `inside_circumcircle`
