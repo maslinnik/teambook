@@ -14,7 +14,6 @@ void init(int n) {
         rev[i] = (rev[i >> 1] >> 1) | (i & 1) * (n >> 1);
     }
     const int root_n = binpow(ROOT, (MOD - 1) / n);
-    int cur = 1;
     for (int i = 0, cur = 1; i < n / 2; ++i) {
         root[i + n / 2] = cur;
         cur = mul(cur, root_n);
