@@ -1,5 +1,12 @@
-vector<int> sa, pos, lcp;
+/**
+ * Author: Vladimir Ragulin
+ * Description: Calculates suffix array, inverse suffix array and LCP array of the given string.
+ * Time: O(n \log n)
+ */
+
 const int M = 1e5 + 10;
+vector<int> sa, pos, lcp;
+
 void suffix_array(string& s) {
     int n = sz(s);
     vector<int> c(n), cur(n);
@@ -7,10 +14,10 @@ void suffix_array(string& s) {
     for (int i = 0; i < n; ++i) {
         sa[i] = i, c[i] = s[i];
     }
-    sort(sa.begin(), sa.end(), [&](int i, int j) { return c[i] < c[j]; });
-    int cnt[M];
+    sort(all(sa), [&](int i, int j) { return c[i] < c[j]; });
+    vector<int> cnt(M);
     for (int k = 1; k < n; k <<= 1) {
-        fill(cnt, cnt + M, 0);
+        fill(all(cnt), 0);
         for (int x : c) cnt[x]++;
         for (int i = 1; i < M; ++i) cnt[i] += cnt[i - 1];
         for (int i : sa) {
