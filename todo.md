@@ -4,6 +4,7 @@
   - [x] FFT
   - [x] Berlekamp-Massey
   - [x] $1/f$, $e^f$, $\log f$, etc
+  - [x] Middle-product with Tellegen's principle
   - [ ] FFT modulos
   - [ ] Linear recurrence
 - Strings
