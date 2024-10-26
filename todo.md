@@ -27,7 +27,7 @@
   - [x] Extended GCD
   - [x] CRT
   - [ ] Floor sum
-  - [ ] Möbius function
+  - [x] Möbius function
   - [ ] $1^s + 2^s + \dots + n^s$
 - Combinatorics
   - [x] Number of derangements

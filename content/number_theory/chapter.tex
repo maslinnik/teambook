@@ -2,3 +2,14 @@
 
 \kactlimport{exgcd.cpp}{Extended GCD}
 \kactlimport{crt.cpp}{CRT}
+\section{Möbius function}
+$$\mu(n) = 
+	\begin{cases}
+		0, n \text{ is not square free}\\
+		1, n \text{ has even number of prime factors}\\
+		-1, n \text{ has odd number of prime factors}\\
+	\end{cases}
+$$
+$$\sum_{d | n} \mu(d) = \text{int}(n = 1)$$
+Möbius inversion:
+$$g(n) = \sum_{d | n} f(d) \iff f(n) = \sum_{d | n} \mu(d) g(n / d) = \sum_{d | n} \mu(n / d) g(d)$$
