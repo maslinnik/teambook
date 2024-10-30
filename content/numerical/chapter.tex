@@ -34,3 +34,9 @@
 \kactlimport{fft.cpp}{FFT}
 \kactlimport{mult.cpp}{Middle product}
 \kactlimport{berlekamp_massey.cpp}{Berlekamp-Massey}
+\section{Linear recurrence}
+Let $A$ be generating function for our recurrence, $C$ be its characteristic polynomial and $k = |C|$.
+
+Let $D = C \cdot A$. Then $D \text{ mod } x^k = D$
+$$A = \frac{(A \text{ mod } x^k) C \text{ mod } x^k}{C} = \frac{A_0C \text{ mod } x^k}{C}$$
+$$[x^n]\frac{P(x)}{Q(x)} = [x^n]\frac{P(x)Q(-x)}{Q(x)Q(-x)}$$

@@ -6,7 +6,7 @@
   - [x] $1/f$, $e^f$, $\log f$, etc
   - [x] Middle-product with Tellegen's principle
   - [x] FFT modulos
-  - [ ] Linear recurrence
+  - [x] Linear recurrence
 - Strings
   - [x] Z-function and prefix function
   - [x] Suffix array + LCP
