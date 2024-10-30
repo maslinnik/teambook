@@ -23,7 +23,7 @@
   - [x] Dinitz
   - [x] MCMF (Johnson)
 - Number theory 
-  - [ ] Pollard-Rho
+  - [x] Pollard-Rho
   - [x] Extended GCD
   - [x] CRT
   - [ ] Floor sum
