@@ -28,7 +28,7 @@
   - [x] CRT
   - [ ] Floor sum
   - [x] Möbius function
-  - [ ] $1^s + 2^s + \dots + n^s$
+  - [x] $1^s + 2^s + \dots + n^s$
 - Combinatorics
   - [x] Number of derangements
   - [x] Burnside's lemma
