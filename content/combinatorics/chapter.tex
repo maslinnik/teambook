@@ -46,7 +46,7 @@ $$\text{EGF: } \sum_{n = k}^{\infty} S(n, k)\frac{x^n}{n!} = \frac{(e^x - 1)^k}{
 \section{Bell numbers}
 Bell number $B_n$ is the number of partitions of $n$ labeled elements.
 $$B_0 = B_1 = 1$$
-$$B_n = \sum_{k = 0}^{n - 1} C_n^k B_k = \sum_{k = 0}^{n} S(n, k)$$
+$$B_n = \sum_{k = 0}^{n - 1} C_{n - 1}^k B_k = \sum_{k = 0}^{n} S(n, k)$$
 $$\text{EGF: } \sum_{n = 1}^{\infty}\frac{B_n}{n!}x^n = e^{e^x - 1}$$
 
 
