@@ -48,3 +48,5 @@ $$h(a, b, c, n) = mn(m + 1) - 2g(c, c - b - 1, a, m - 1) - 2f(c, c - b - 1, a, m
 Otherwise:
 $$g(a, b, c, n) = \frac{n(n + 1)(2n + 1)}{6} \left\lfloor\frac{a}{c}\right\rfloor + \frac{n(n + 1)}{2} \left\lfloor\frac{b}{c}\right\rfloor + g(a \bmod c, b \bmod c, c, n)$$
 $$h(a, b, c, n) = \frac{n(n + 1)(2n + 1)}{6} \left\lfloor\frac{a}{c}\right\rfloor^2 + (n + 1) \left\lfloor\frac{b}{c}\right\rfloor^2 + n(n + 1) \left\lfloor\frac{a}{c}\right\rfloor \left\lfloor\frac{b}{c}\right\rfloor +$$$$+ h(a \bmod c, b \bmod c, c, n) + 2 \left\lfloor\frac{b}{c}\right\rfloor f(a \bmod c, b \bmod c, c, n) +$$$$+ 2 \left\lfloor\frac{a}{c}\right\rfloor g(a \bmod c, b \bmod c, c, n)$$
+
+\kactlimport{floor_sum.cpp}{Floor Sum implementation}
