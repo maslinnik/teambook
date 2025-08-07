@@ -1,4 +1,4 @@
-# To-Do List
+# Contents & To-Do List
 
 - Numerical
   - [x] FFT
@@ -7,28 +7,20 @@
   - [x] Middle-product with Tellegen's principle
   - [x] FFT modulos
   - [x] Linear recurrence
-- Strings
-  - [x] Z-function and prefix function
-  - [x] Suffix array + LCP
-  - [x] Aho-Corasick
-  - [ ] Suffix automaton
-  - [x] Lexicographically minimal string rotation using Lyndon factorization
-- Graphs
-  - [ ] SPFA
-  - [ ] Edmonds' algorithm (arborescence of minimum weight)
-  - [ ] Link-cut tree
-  - [ ] Maximum independent set in $O(2^{n/2})$
-  - [ ] General weighted matching
+
 - Flows
   - [x] Dinitz
   - [x] MCMF (Johnson)
-- Number theory 
+
+- Number theory
   - [x] Pollard-Rho
   - [x] Extended GCD
   - [x] CRT
-  - [ ] Floor sum
+  - [x] Miller-Rabin test
+  - [x] Floor sum
   - [x] Möbius function
   - [x] $1^s + 2^s + \dots + n^s$
+
 - Combinatorics
   - [x] Number of derangements
   - [x] Burnside's lemma
@@ -36,9 +28,27 @@
   - [x] Bell numbers
   - [x] Narayana numbers
   - [x] Prüfer code and number of trees
+
+- Strings
+  - [x] Z-function and prefix function
+  - [x] Suffix array + LCP
+  - [x] Aho-Corasick
+  - [ ] Suffix automaton
+  - [x] Lexicographically minimal string rotation using Lyndon factorization
+  - [x] Eertree
+
+- Graphs
+  - [ ] SPFA
+  - [x] Edmonds' algorithm (arborescence of minimum weight)
+  - [x] Link-cut tree
+  - [x] Maximum clique
+  - [ ] General weighted matching
+  - [x] Dominator tree
+
 - Geometry
   - [ ] Something from KACTL
   - [ ] `inside_circumcircle`
+
 - Miscellaneous
-	- [x] Simpson's rule
-	- [x] Fractional binary search
+  - [x] Simpson's rule
+  - [x] Fractional binary search
