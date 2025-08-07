@@ -5,6 +5,7 @@
   - [x] Berlekamp-Massey
   - [x] $1/f$, $e^f$, $\log f$, etc
   - [x] Middle-product with Tellegen's principle
+  - [ ] Multipoint evaluation with Tellegen's principle
   - [x] FFT modulos
   - [x] Linear recurrence
 
@@ -32,6 +33,7 @@
 - Strings
   - [x] Z-function and prefix function
   - [x] Suffix array + LCP
+  - [ ] Split suffix array + LCP on two functions to use LCP with Linear SA
   - [x] Aho-Corasick
   - [ ] Suffix automaton
   - [x] Lexicographically minimal string rotation using Lyndon factorization
@@ -44,10 +46,12 @@
   - [x] Maximum clique
   - [ ] General weighted matching
   - [x] Dominator tree
+  - [ ] Better dominator tree
 
 - Geometry
   - [ ] Something from KACTL
   - [ ] `inside_circumcircle`
+  - [ ] Half-planes intersection (?)
 
 - Miscellaneous
   - [x] Simpson's rule
