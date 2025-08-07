@@ -284,6 +284,8 @@ def main():
             processwithcomments(caption, instream, outstream, 'Python')
         elif language == "rawpy":
             processraw(caption, instream, outstream, 'Python')
+        elif language == "txt":
+            processraw(caption, instream, outstream)
         else:
             raise ValueError("Unknown language: " + str(language))
     except (ValueError, getopt.GetoptError, IOError) as err:
