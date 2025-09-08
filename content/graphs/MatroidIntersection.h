@@ -8,7 +8,7 @@
  * Status: AC in ucup task about matroids
  */
 template <class M1, class M2>
-vector<int> matroid_intersection(M1& m1, M2& m2, int n, auto&& cost = [](int) {return 1;}) {
+vector<int> matroid_intersection(M1&& m1, M2&& m2, int n, auto&& cost = [](int) {return 1;}) {
     const ll INF18 = 4'000'000'000'000'000'000;
     vector<int> result;
     vector<ll> potential(n, 0);
@@ -91,7 +91,7 @@ vector<int> matroid_intersection(M1& m1, M2& m2, int n, auto&& cost = [](int) {r
         ranges::sort(result);
         vector<int> new_result;
         new_result.reserve(xr.size() + result.size());
-        ranges::merge(xr, result, back_inserter((new_result)));
+        ranges::merge(xr, result, back_inserter(new_result));
         int sz = 0;
         for (int i = 0; i < new_result.size(); ++i) {
             if (i + 1 != new_result.size() && new_result[i] == new_result[i + 1]) {

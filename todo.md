@@ -12,6 +12,8 @@
 - Flows
   - [x] Dinitz
   - [x] MCMF (Johnson)
+  - [ ] Gomory-Hu tree
+  - [ ] Push-relabel
 
 - Number theory
   - [x] Pollard-Rho
@@ -33,6 +35,7 @@
 - Strings
   - [x] Z-function and prefix function
   - [x] Suffix array + LCP
+  - [x] Linear suffix array
   - [ ] Split suffix array + LCP on two functions to use LCP with Linear SA
   - [x] Aho-Corasick
   - [ ] Suffix automaton
@@ -45,6 +48,7 @@
   - [x] Link-cut tree
   - [x] Maximum clique
   - [ ] General weighted matching
+  - [x] Weighted matroid intersection
   - [x] Dominator tree
   - [ ] Better dominator tree
 
