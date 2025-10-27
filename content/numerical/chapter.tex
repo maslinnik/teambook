@@ -18,6 +18,10 @@
 	In general case you have equation $P(B, x) = 0$. (f.e. $\log B - A(x) = 0$).
 
 	The transition is $B_{2n - \alpha} = B_n - \frac{P(B, x)}{P_B'(B, x)}$. (if $P_B'(B, x)$ is divisible by $x^\alpha$).
+\section{Nesterov's gradient descent}
+	$x^{k + 1} = x^k + \tau(x^k - x^{k - 1}) - \gamma_k \nabla f(x^k + \tau(x^k - x^{k - 1}))$
+
+	$\tau \simeq 0.85 \ldots 0.95$
 \section{Additional modulos for FFT}
 \begin{center}
 	\begin{tabular}{ c | c | c }
