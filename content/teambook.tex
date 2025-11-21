@@ -1,5 +1,6 @@
 \documentclass[12pt, a4paper, notitlepage]{extreport}
 \usepackage{kactlpkg}
+\usepackage{background}
 \kactlcontentdir{content}
 
 \university{MIPT: Ctrl+XD (Kostylev, Pervutinskiy, Ragulin)}{Moscow IPT}{mipt}
@@ -8,6 +9,8 @@
 % \enablecolors
 
 \begin{document}
+    \backgroundsetup{contents={}}
+
     \maketeampage
 
 	\begin{multicols*}{2}
@@ -22,4 +25,11 @@
     \kactlchapter{misc}
 
 	\end{multicols*}
+
+    \backgroundsetup{scale = 1, angle = 0, contents={\includegraphics[width=\paperwidth]{content/grids/square.pdf} }}\mbox{~}
+    \newpage
+    \backgroundsetup{scale = 1, angle = 0, contents={\includegraphics[width=\paperwidth]{content/grids/triangle.pdf} }}\mbox{~}
+    \newpage
+    \backgroundsetup{scale = 1, angle = 0, contents={\includegraphics[width=\paperwidth]{content/grids/hexagonal.pdf} }}\mbox{~}
+
 \end{document}
