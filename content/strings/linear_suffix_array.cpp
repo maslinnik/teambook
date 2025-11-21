@@ -1,7 +1,6 @@
 /**
  * Author: Some guy from yosupo
  * Description: Calculates suffix array of the given string.
- * Usage: SA::suffix_sort(s.size(), s.begin());
  * Time: Fastest
  * Source: https://judge.yosupo.jp/submission/296441
  */

@@ -1,6 +1,6 @@
 /**
  * Author: Vladimir Ragulin
- * Description: Calculates suffix array of the given string. Pass s.size() to sort cyclic shifts, s.size() + 1 to sort suffixes
+ * Description: Calculates suffix array of the given string.
  * Time: O(n \log n)
  */
 
