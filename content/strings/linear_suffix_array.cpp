@@ -38,15 +38,17 @@ namespace SA {
 		For(i, 0, o) lms[o + 1 + i] = lms[sa[i]];
 		induced_sort(n, m, s, o, lms + o + 1, ty, cnt, sa);
 	}
-	template <class IT> vector<int> suffix_sort(int n, IT s) {
-		using T = typename iterator_traits<IT>::value_type;
+	vector<int> suffix_sort(const auto& str) {
+		using T = std::decay_t<decltype(str[0])>;
+		int n = str.size();
+		auto s = str.begin();
         vector<T> t(n + 1);
-        vector<int> ty((n + 1) << 1), lms(n + 1), cnt((n + 1) << 1), sa(n + 1);
 		auto o = minmax_element(s, s + n); int d = *o.first - 1, m = *o.second - d;
+		vector<int> ty(2 * (n + m + 2)), lms(n + 1), cnt(2 * (n + m + 2)), sa(n + 1);
 		For(i, 0, n - 1) t[i] = s[i] - d; t[n] = 0;
 		sa_is(n, m, t.data(), ty.data(), lms.data(), cnt.data(), sa.data()); For(i, 1, n) sa[i]++;
-        sa.erase(sa.begin());
         for (auto& x : sa) --x;
+		++sa[0];
         return sa;
 	}
 }

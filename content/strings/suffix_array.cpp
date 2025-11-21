@@ -1,48 +1,39 @@
 /**
  * Author: Vladimir Ragulin
- * Description: Calculates suffix array, inverse suffix array and LCP array of the given string.
+ * Description: Calculates suffix array of the given string. Pass s.size() to sort cyclic shifts, s.size() + 1 to sort suffixes
  * Time: O(n \log n)
  */
 
-const int M = 1e5 + 10;
-vector<int> sa, pos, lcp;
-
-void suffix_array(string& s) {
-    int n = sz(s);
-    vector<int> c(n), cur(n);
-    sa.resize(n), pos.resize(n), lcp.resize(n);
+vector<int> suffix_array(const auto& s, bool sort_suffixes=true) {
+    int n = s.size() + sort_suffixes;
+    auto [mn, mx] = minmax_element(s.begin(), s.begin() + n);
+    vector<int> c(n), cur(n), sa(n), cnt(max<int>(*mx - *mn + 1, n) + 1);
+    iota(sa.begin(), sa.end(), 0);
     for (int i = 0; i < n; ++i) {
-        sa[i] = i, c[i] = s[i];
+        c[i] = s[i] - *mn + 1;
     }
-    sort(all(sa), [&](int i, int j) { return c[i] < c[j]; });
-    vector<int> cnt(M);
+    ranges::sort(sa, [&](int i, int j) { return c[i] < c[j]; });
     for (int k = 1; k < n; k <<= 1) {
-        fill(all(cnt), 0);
+        ranges::fill(cnt, 0);
         for (int x : c) cnt[x]++;
-        for (int i = 1; i < M; ++i) cnt[i] += cnt[i - 1];
+        for (int i = 1; i < cnt.size(); ++i) cnt[i] += cnt[i - 1];
         for (int i : sa) {
-            int c2 = c[(i - k + n) % n] - 1;
-            cur[cnt[c2]++] = (i - k + n) % n;
+            i -= k;
+            if (i < 0) i += n;
+            int c2 = c[i] - 1;
+            cur[cnt[c2]++] = i;
         }
         swap(cur, sa);
         int x = -1, y = -1, p = 0;
         for (int i : sa) {
-            if (c[i] != x || c[(i + k) % n] != y) {
-                x = c[i], y = c[(i + k) % n], p++;
+            int nxt = i + k;
+            if (nxt >= n) nxt -= n;
+            if (c[i] != x || c[nxt] != y) {
+                x = c[i], y = c[nxt], p++;
             }
             cur[i] = p;
         }
         swap(cur, c);
     }
-    for (int i = 0; i < n; ++i) pos[sa[i]] = i;
-    int l = 0;
-    for (int i = 0; i < n; ++i) {
-        if (pos[i] == n - 1) {
-            l = 0;
-        } else {
-            while (s[(i + l) % n] == s[(sa[pos[i] + 1] + l) % n]) ++l;
-            lcp[pos[i]] = l;
-            l = max(0, l - 1);
-        }
-    }
+    return sa;
 }
