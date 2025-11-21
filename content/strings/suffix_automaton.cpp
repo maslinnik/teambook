@@ -1,6 +1,6 @@
 /**
  * Author: Gleb Kostylev
- * Description: Builds Aho-Corasick
+ * Description: Builds suffix automaton
  * Time: O(nC)
  * Status: ok submission on CF (see examples)
  */
