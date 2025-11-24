@@ -1,6 +1,6 @@
 /**
  * Author: Gleb Kostylev
- * Description: Builds suffix automaton
+ * Description: Builds suffix automaton.
  * Time: O(nC)
  * Status: ok submission on CF (see examples)
  */
@@ -53,7 +53,7 @@ Node* add(Node* a, int ch) {
     return b->par->nxt[ch];
 }
 
-void visit_subautomaton(Node* v, auto&& cb = []{}) {
+void visit_subautomaton(Node* v, auto&& cb = [](Node*){}) {
     if (v->last_used == Node::timer) {
         return;
     }
