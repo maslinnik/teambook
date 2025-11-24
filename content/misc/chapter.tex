@@ -1,4 +1,9 @@
 \chapter{Miscellaneous}
 
+\section{Nesterov's gradient descent}
+	$x^{k + 1} = x^k + \tau(x^k - x^{k - 1}) - \gamma_k \nabla f(x^k + \tau(x^k - x^{k - 1}))$
+
+	$\tau \simeq 0.85 \ldots 0.95$
+
 \kactlimport{integrate.cpp}{Integrate}
 \kactlimport{frac_bs.cpp}{Fractional binary search}

@@ -18,10 +18,6 @@
 	In general case you have equation $P(B, x) = 0$. (f.e. $\log B - A(x) = 0$).
 
 	The transition is $B_{2n - \alpha} = B_n - \frac{P(B, x)}{P_B'(B, x)}$. (if $P_B'(B, x)$ is divisible by $x^\alpha$).
-\section{Nesterov's gradient descent}
-	$x^{k + 1} = x^k + \tau(x^k - x^{k - 1}) - \gamma_k \nabla f(x^k + \tau(x^k - x^{k - 1}))$
-
-	$\tau \simeq 0.85 \ldots 0.95$
 \section{Additional modulos for FFT}
 \begin{center}
 	\begin{tabular}{ c | c | c }
@@ -45,3 +41,18 @@ Let $A$ be generating function for our recurrence, $C$ be its characteristic pol
 Let $D = C \cdot A$. Then $D \text{ mod } x^k = D$
 $$A = \frac{(A \text{ mod } x^k) C \text{ mod } x^k}{C} = \frac{A_0C \text{ mod } x^k}{C}$$
 $$[x^n]\frac{P(x)}{Q(x)} = [x^n]\frac{P(x)Q(-x)}{Q(x)Q(-x)}$$
+
+\section{Xor-And-Or Convolutions}
+To compute
+$$c_i = \sum_{j, k : j | k = i} a_j \cdot b_k$$
+we transform (a) and (b) into their subset sums, take the elementwise product, and then apply the inverse transform.
+
+For
+$$c_i = \sum_{j, k : j \& k = i} a_j \cdot b_k$$
+we transform (a) and (b) into their superset sums and do the same.
+
+To compute
+$$c_i = \sum_{j, k : j \oplus k = i} a_j \cdot b_k$$
+we applay Walsh-Hadamard transform, take the elementwise product, and then apply the inverse transform.
+
+\kactlimport{walsh-hadamard.cpp}{Walsh-Hadamard}
