@@ -1,4 +1,11 @@
 \chapter{Graphs}
+\section{Erdős–Gallai theorem}
+A simple graph with node degrees $d_1 \ge \ldots \ge d_n$ exists iff $\sum d_i$ is even and for every $k = 1 \ldots n$
+$$\sum_{i = 1}^{k} d_i \le k(k - 1) + \sum_{i = k + 1}^{n} \min(d_i, k)$$
+
+\section{Gale-Ryser theorem}
+A bipartite graph with vertex degrees $a_1 \ge \ldots \ge a_n$ in left set and $b_{1},\ldots ,b_{m}$ in right set exists iff $\sum a_i = \sum b_i$ and for every $k = 1 \ldots n$
+$$\sum_{i = 1}^{k} a_i \le \sum_{i = 1}^{m} \min(b_i, k)$$
 
 \kactlimport{TarjanSCC.h}{SCC}
 \kactlimport{DirectedMST.h}{Directed MST}
