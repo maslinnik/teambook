@@ -9,8 +9,7 @@
 #define Fol(i, j, k) for ( int i = (j) ; i >= (k) ; i-- )
 
 namespace SA {
-	template <class IT> inline void induced_sort(int n, int m, IT s, int o,
-												   int *val, int *ty, int *cnt, int *sa) {
+	template <class IT> inline void induced_sort(int n, int m, IT s, int o, int *val, int *ty, int *cnt, int *sa) {
 		int *c = cnt + m + 1; fill(sa, sa + n + 1, 0), copy(cnt, c, c);
 		Fol(i, o, 0) sa[--c[s[val[i]]]] = val[i];
 		copy(cnt, cnt + m, c + 1);
