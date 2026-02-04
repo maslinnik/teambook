@@ -7,7 +7,7 @@
 
 struct Node { // Splay tree. Root's pp contains tree's parent.
     Node* p = 0;
-    // Node* pp = 0; // comment if you don't need it
+    Node* pp = 0; // comment if you don't need it
     array<Node*, 2> c{};
 
     bool flip = 0;
@@ -55,7 +55,7 @@ struct Node { // Splay tree. Root's pp contains tree's parent.
         z->c[i ^ 1] = this;
         fix(); x->fix(); y->fix();
         if (p) p->fix();
-        // swap(pp, y->pp);
+        swap(pp, y->pp);
     }
 
     void splay() { /// Splay this up to the root. Always finishes without flip set.
