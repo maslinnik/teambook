@@ -68,7 +68,7 @@ struct Node { // Splay tree. Root's pp contains tree's parent.
         // swap(pp, y->pp);
     }
 
-    void splay() { /// Splay this up to the root. Always finishes without flip set.
+    void splay() { // Splay this up to the root. Always finishes without flip set.
         for (pushFlip(); p; ) {
             if (p->p) p->p->pushFlip();
             p->pushFlip(); pushFlip();
@@ -78,7 +78,7 @@ struct Node { // Splay tree. Root's pp contains tree's parent.
         }
     }
 
-    Node* first() { /// Return the min element of the subtree rooted at this, splayed to the top.
+    Node* first() { // Return the min element of the subtree rooted at this, splayed to the top.
         pushFlip();
         return c[0] ? c[0]->first() : (splay(), this);
     }

@@ -37,7 +37,7 @@ struct LinkCut {
         return nu == access(&node[v])->first();
     }
 
-    void makeRoot(Node* u) { /// Move u to root of represented tree.
+    void makeRoot(Node* u) { // Move u to root of represented tree.
         access(u);
         u->splay();
         if(u->c[0]) {
@@ -49,7 +49,7 @@ struct LinkCut {
         }
     }
 
-    Node* access(Node* u) { /// Move u to root aux tree. Return the root of the root aux tres.
+    Node* access(Node* u) { // Move u to root aux tree. Return the root of the root aux tree.
         u->splay();
         while (Node* pp = u->pp) {
             pp->splay(); u->pp = 0;
@@ -58,5 +58,5 @@ struct LinkCut {
             pp->c[1] = u; pp->fix(); u = pp;
         }
         return u;
-    } /// Tree root node will be to the left from u in root aux tree order. Does not splay u.
+    } // Tree root node will be to the left from u in root aux tree order. Does not splay u.
 };
