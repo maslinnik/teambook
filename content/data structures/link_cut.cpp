@@ -13,12 +13,7 @@
 struct LinkCut {
     vector<Node> node;
 
-    LinkCut(const vector<ll>& a) {
-        node.reserve(a.size());
-        for (auto x : a) {
-            node.emplace_back(x);
-        }
-    }
+    LinkCut(int N): node(N) {}
 
     void link(int u, int v) { // add an edge (u, v)
         assert(!connected(u, v));
