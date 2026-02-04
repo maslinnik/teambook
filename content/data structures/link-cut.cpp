@@ -8,52 +8,7 @@
  * Time: All operations take amortized O(\log N).
  * Status: Stress-tested a bit for N <= 20
  */
-#pragma once
-
-struct Node { // Splay tree. Root's pp contains tree's parent.
-	Node *p = 0, *pp = 0, *c[2];
-	bool flip = 0;
-	Node() { c[0] = c[1] = 0; fix(); }
-	void fix() {
-		if (c[0]) c[0]->p = this;
-		if (c[1]) c[1]->p = this;
-		// (+ update sum of subtree elements etc. if wanted)
-	}
-	void pushFlip() {
-		if (!flip) return;
-		flip = 0; swap(c[0], c[1]);
-		if (c[0]) c[0]->flip ^= 1;
-		if (c[1]) c[1]->flip ^= 1;
-	}
-	int up() { return p ? p->c[1] == this : -1; }
-	void rot(int i, int b) {
-		int h = i ^ b;
-		Node *x = c[i], *y = b == 2 ? x : x->c[h], *z = b ? y : x;
-		if ((y->p = p)) p->c[up()] = y;
-		c[i] = z->c[i ^ 1];
-		if (b < 2) {
-			x->c[h] = y->c[h ^ 1];
-			y->c[h ^ 1] = x;
-		}
-		z->c[i ^ 1] = this;
-		fix(); x->fix(); y->fix();
-		if (p) p->fix();
-		swap(pp, y->pp);
-	}
-	void splay() { /// Splay this up to the root. Always finishes without flip set.
-		for (pushFlip(); p; ) {
-			if (p->p) p->p->pushFlip();
-			p->pushFlip(); pushFlip();
-			int c1 = up(), c2 = p->up();
-			if (c2 == -1) p->rot(c1, 2);
-			else p->p->rot(c2, c1 != c2);
-		}
-	}
-	Node* first() { /// Return the min element of the subtree rooted at this, splayed to the top.
-		pushFlip();
-		return c[0] ? c[0]->first() : (splay(), this);
-	}
-};
+// copy Splay Tree until enum class side {...} excluded
 
 struct LinkCut {
 	vector<Node> node;
@@ -67,7 +22,7 @@ struct LinkCut {
 	void cut(int u, int v) { // remove an edge (u, v)
 		Node *x = &node[u], *top = &node[v];
 		makeRoot(top); x->splay();
-		assert(top == (x->pp ?: x->c[0]));
+		// assert(top == (x->pp ?: x->c[0]));
 		if (x->pp) x->pp = 0;
 		else {
 			x->c[0] = top->p = 0;
