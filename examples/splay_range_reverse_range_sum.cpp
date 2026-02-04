@@ -1,9 +1,15 @@
-/**
- * Author: Simon Lindholm + Gleb Kostylev
- * Description: Splay tree.
- * Time: All operations take amortized O(\log N).
- * Status: Tested on yosupo Range Reverse Range Sum
- */
+// https://judge.yosupo.jp/problem/range_reverse_range_sum
+
+#ifndef LOCAL
+#pragma GCC optimize("O3")
+#endif
+#include <bits/stdc++.h>
+#define sz(n) (int)(n).size()
+#define all(x) (x).begin(), (x).end()
+#define rall(x) (x).rbegin(), (x).rend()
+#define endl '\n'
+using namespace std;
+using ll = int64_t;
 
 struct Node { // Splay tree. Root's pp contains tree's parent.
     Node* p = 0;
@@ -12,18 +18,22 @@ struct Node { // Splay tree. Root's pp contains tree's parent.
 
     bool flip = 0;
     int cnt = 1;
+    ll me = 0;
+    ll sum = 0;
     // more fields if wanted
 
-    Node(ll v) {
+    Node(ll v): me(v) {
         fix();
     }
 
     void fix() {
         cnt = 1;
+        sum = me;
         for (auto& ch : c) {
             if (ch) {
                 ch->p = this;
                 cnt += ch->cnt;
+                sum += ch->sum;
                 // more if wanted
             }
         }
@@ -118,4 +128,54 @@ pair<Node*, Node*> split_k(Node* v, int k) {
         k -= left_sz + 1;
         return side::left;
     });
+}
+
+void solve() {
+    int n, q;
+    cin >> n >> q;
+    Node* splay = nullptr;
+    for (int i = 0; i < n; ++i) {
+        ll x;
+        cin >> x;
+        Node* v = new Node(x);
+        v->c[0] = splay;
+        splay = v;
+        splay->fix();
+    }
+    while (q--) {
+        int t, l, r;
+        cin >> t >> l >> r;
+        if (l == r) {
+            if (t == 1) {
+                cout << 0 << endl;
+            }
+            continue;
+        }
+        auto [mid1, ri] = split_k(splay, r);
+        auto [le, mid] = split_k(mid1, l);
+        if (t == 0) {
+            mid->flip = true;
+            mid->pushFlip();
+        } else {
+            cout << mid->sum << endl;
+        }
+        splay = merge(merge(le, mid), ri);
+    }
+}
+
+int main() {
+#ifdef LOCAL
+    freopen("../stream.in", "r", stdin);
+    freopen("../stream.out", "w", stdout);
+    auto start = clock();
+#else
+    cin.tie(nullptr)->sync_with_stdio(false);
+#endif
+    int tt = 1;
+    // cin >> tt;
+    while (tt--) solve();
+#ifdef LOCAL
+    cerr << fixed << setprecision(3) << "TIME: " << 1e3 * (clock() - start) / CLOCKS_PER_SEC << " ms" << endl;
+#endif
+    return 0;
 }

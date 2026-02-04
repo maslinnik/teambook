@@ -1,3 +1,5 @@
+// https://codeforces.com/problemset/problem/319/C
+
 #ifndef LOCAL
 #pragma GCC optimize("O3")
 #endif
