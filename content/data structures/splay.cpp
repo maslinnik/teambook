@@ -14,7 +14,7 @@ struct Node { // Splay tree. Root's pp contains tree's parent.
     int cnt = 1;
     // more fields if wanted
 
-    Node(ll v) {
+    Node() {
         fix();
     }
 
