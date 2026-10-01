@@ -1,5 +1,8 @@
 name: Compile PDF
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   compile_pdf:
     runs-on: ubuntu-latest
