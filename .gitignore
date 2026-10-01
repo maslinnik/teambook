@@ -1,4 +1,5 @@
 build/
 .idea/
-.vscode
+.vscode/
+venv/
 teambook.pdf
