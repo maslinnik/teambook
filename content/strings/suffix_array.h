@@ -3,8 +3,6 @@
  * Description: Calculates suffix array of the given string.
  * Time: O(n \log n)
  */
-#include <bits/stdc++.h> // exclude-line
-using namespace std;     // exclude-line
 
 vector<int> suffix_array(const auto& s, bool sort_suffixes=true) {
     int n = s.size() + sort_suffixes;

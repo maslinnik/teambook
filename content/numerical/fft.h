@@ -23,7 +23,7 @@ void init(int n) {
     }
 }
 
-void dft(int* f, int n, bool inverse = false) {
+void dft(vector<int>& f, int n, bool inverse = false) {
     init(n);
     for (int i = 0; i < n; ++i) {
         if (i < rev[i]) swap(f[i], f[rev[i]]);
@@ -36,7 +36,7 @@ void dft(int* f, int n, bool inverse = false) {
                 f[i + j] = add(f[i + j], z);
             }
     if (inverse) {
-        reverse(f + 1, f + n);
+        reverse(f.begin() + 1, f.begin() + n);
         const int inv_n = inv(n);
         for (int i = 0; i < n; ++i) f[i] = mul(f[i], inv_n);
     }
