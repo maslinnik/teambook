@@ -11,4 +11,9 @@ build:
 clean:
 	rm -rf build header.tmp
 
+test:
+	python3 -m venv venv
+	venv/bin/pip3 install online-judge-verify-helper setuptools==80
+	venv/bin/oj-verify run
+
 .PHONY: build clean
