@@ -15,3 +15,9 @@ make clean
 ```
 
 Removes all build files.
+
+```shell
+make test
+```
+
+Runs Library Checker tests.
