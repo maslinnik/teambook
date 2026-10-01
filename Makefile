@@ -14,8 +14,6 @@ clean:
 
 test:
 	python3 -m venv venv
-	source venv/bin/activate
-	pip3 install online-judge-verify-helper setuptools==80
-	oj-verify run
+	source venv/bin/activate && pip3 install online-judge-verify-helper setuptools==80 && oj-verify run
 
 .PHONY: build clean
