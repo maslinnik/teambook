@@ -1,7 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/suffixarray"
 
 #include "prelude.h"
-#include "io.h"
+#include "vector_io.h"
+
 #include "strings/suffix_array.h"
 
 int main() {

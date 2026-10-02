@@ -1,3 +1,8 @@
+/**
+ * Author: Roman Pervutinskiy
+ * Description: Modular arithmetic on int32_t.
+ */
+
 int add(int a, int b) {
     return a + b < MOD ? a + b : a + b - MOD;
 }

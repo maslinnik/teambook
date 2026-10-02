@@ -1,3 +1,9 @@
+/**
+ * Author: Roman Pervutinskiy
+ * Description: Calculates polynomial product of two arrays.
+ * Time: O(n \log n)
+ */
+
 vector<int> mul(vector<int> a, vector<int> b) {
     int n = sz(a), m = sz(b), k = 1;
     while (k < n + m - 1) k <<= 1;

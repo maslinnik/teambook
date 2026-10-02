@@ -4,6 +4,5 @@
 #define all(x) (x).begin(), (x).end()
 
 using ll = long long;
-using ull = unsigned long long;
 
 using namespace std;
