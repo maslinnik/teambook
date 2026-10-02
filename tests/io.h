@@ -1,5 +1,8 @@
+#include <iostream>
+#include <vector>
+
 template<typename T>
-istream& operator>>(istream& in, vector<T>& v) {
+std::istream& operator>>(std::istream& in, std::vector<T>& v) {
     for (auto& x : v) {
         in >> x;
     }
@@ -7,7 +10,7 @@ istream& operator>>(istream& in, vector<T>& v) {
 }
 
 template<typename T>
-ostream& operator<<(ostream& out, const vector<T>& v) {
+std::ostream& operator<<(std::ostream& out, const std::vector<T>& v) {
     for (const auto& x : v) {
         out << x << ' ';
     }
