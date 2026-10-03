@@ -1,4 +1,4 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
+#define PROBLEM "https://judge.yosupo.jp/problem/inv_of_formal_power_series"
 
 #include "prelude.h"
 #include "vector_io.h"
@@ -9,13 +9,13 @@ const int N = 1 << 20;
 #include "number_theory/mod.h"
 #include "numerical/fft.h"
 #include "numerical/mul.h"
+#include "numerical/inv.h"
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
-    int n, m;
-    cin >> n >> m;
-    vector<int> a(n), b(m);
-    cin >> a >> b;
-    auto c = mul(a, b);
-    cout << c << '\n';
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    cin >> a;
+    cout << inv(a, n) << '\n';
 }

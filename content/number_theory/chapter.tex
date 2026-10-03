@@ -2,8 +2,8 @@
 
 \kactlimport{exgcd.cpp}{Extended GCD}
 \kactlimport{crt.cpp}{CRT}
-\kactlimport{miller_rabin.cpp}{Miller-Rabin}
-\kactlimport{pollard_rho.cpp}{Pollard-Rho}
+\kactlimport{miller_rabin.h}{Miller-Rabin}
+\kactlimport{pollard_rho.h}{Pollard-Rho}
 \kactlimport{barrett.cpp}{Barrett reduction}
 
 \section{Möbius function}
@@ -50,4 +50,4 @@ Otherwise:
 $$g(a, b, c, n) = \frac{n(n + 1)(2n + 1)}{6} \left\lfloor\frac{a}{c}\right\rfloor + \frac{n(n + 1)}{2} \left\lfloor\frac{b}{c}\right\rfloor + g(a \bmod c, b \bmod c, c, n)$$
 $$h(a, b, c, n) = \frac{n(n + 1)(2n + 1)}{6} \left\lfloor\frac{a}{c}\right\rfloor^2 + (n + 1) \left\lfloor\frac{b}{c}\right\rfloor^2 + n(n + 1) \left\lfloor\frac{a}{c}\right\rfloor \left\lfloor\frac{b}{c}\right\rfloor +$$$$+ h(a \bmod c, b \bmod c, c, n) + 2 \left\lfloor\frac{b}{c}\right\rfloor f(a \bmod c, b \bmod c, c, n) +$$$$+ 2 \left\lfloor\frac{a}{c}\right\rfloor g(a \bmod c, b \bmod c, c, n)$$
 
-\kactlimport{floor_sum.cpp}{Floor Sum implementation}
+\kactlimport{floor_sum.h}{Floor Sum implementation}

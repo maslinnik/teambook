@@ -6,7 +6,7 @@
  */
 
 vector<int> manacher(const std::string& s) {
-    int n = s.size();
+    int n = sz(s);
     vector<int> res(2 * n + 1);
     int longest = 0, root_longest = 0;
     for (int i = 1; i < 2 * n + 1; ++i) {
