@@ -1,7 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/number_of_substrings"
 
 #include "prelude.h"
-#include "vector_io.h"
 
 #include "strings/suffix_array.h"
 #include "strings/lcp.h"
