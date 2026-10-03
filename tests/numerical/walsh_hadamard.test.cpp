@@ -6,7 +6,7 @@
 const int MOD = 998244353;
 
 #include "number_theory/mod.h"
-#include "numerical/walsh-hadamard.h"
+#include "numerical/walsh_hadamard.h"
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);

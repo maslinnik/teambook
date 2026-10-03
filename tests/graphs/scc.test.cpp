@@ -3,7 +3,7 @@
 #include "prelude.h"
 #include "vector_io.h"
 
-#include "graphs/TarjanSCC.h"
+#include "graphs/tarjan_scc.h"
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
