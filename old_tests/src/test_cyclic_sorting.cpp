@@ -4,9 +4,9 @@ using namespace std;
 
 template <class T> ostream& operator<<(ostream& os, const vector<T>& a) {for (auto x : a) os << x << ' '; return os << endl;}
 
-#include "../../content/strings/suffix_array.cpp"
-#include "../../content/strings/linear_suffix_array.cpp"
-#include "../../content/strings/lcp.cpp"
+#include "../../content/strings/suffix_array.h"
+#include "../../content/strings/linear_suffix_array.h"
+#include "../../content/strings/lcp.h"
 
 int main() {
     cerr << "Cyclic sorting" << endl;

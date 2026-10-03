@@ -1,0 +1,8 @@
+exclude:
+  - content/tex
+  - content/example
+  - content/contest
+  - examples
+  - old_tests
+  - tests/prelude.h
+  - tests/vector_io.h
