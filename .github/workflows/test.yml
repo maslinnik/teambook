@@ -15,9 +15,13 @@ jobs:
       - run: |
           make test
           source .venv/bin/activate && oj-verify docs
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: .verify-helper/markdown
+          destination: _site
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: '.verify-helper/markdown'
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
