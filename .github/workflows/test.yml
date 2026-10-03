@@ -10,3 +10,10 @@ jobs:
           python-version: 3.14
       - run: |
           make test
+          source .venv/bin/activate && oj-verify docs
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.verify-helper/markdown'
+      - id: deployment
+        uses: actions/deploy-pages@v4

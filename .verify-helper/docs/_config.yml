@@ -1,0 +1,4 @@
+exclude:
+  - content/tex/preprocessor.py
+  - content/misc/pbds.cpp
+  - content/misc/dynamic_bitset.cpp
