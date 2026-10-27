@@ -1,3 +1,12 @@
+/**
+ * Author: Anonymous
+ * Date: 2025-09-08
+ * Source: https://judge.yosupo.jp/submission/361332
+ * Description: Finds maximum matching in an arbitrary graph.
+ * Time: O(n^3)
+ * Status: AC on yosupo
+ */
+
 template <class W, W INF, int N>
 struct MaxWeightGeneralMatching {
     struct edge {
