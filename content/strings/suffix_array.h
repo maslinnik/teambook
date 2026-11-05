@@ -1,11 +1,14 @@
 /**
  * Author: Vladimir Ragulin
  * Description: Calculates suffix array of the given string.
- * Time: O(n \log n)
+ * Time: O((\max(s) - \min(s)) + n \log n)
  */
 
-vector<int> suffix_array(const auto& s, bool sort_suffixes=true) {
-    int n = s.size() + sort_suffixes;
+vector<int> suffix_array(const auto& s) {
+    // sorts cyclic shifts
+    // don't forget to push back zero if you want an actual suffix array
+    // or pass ranges::subrange(str.begin(), str.end() + 1)
+    int n = s.size();
     auto [mn, mx] = minmax_element(s.begin(), s.begin() + n);
     vector<int> c(n), cur(n), sa(n), cnt(max<int>(*mx - *mn + 1, n) + 1);
     iota(sa.begin(), sa.end(), 0);

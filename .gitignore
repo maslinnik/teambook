@@ -2,3 +2,5 @@ build/
 .idea/
 .vscode/
 teambook.pdf
+.venv
+.verify-helper

@@ -36,8 +36,9 @@ namespace SA {
 		For(i, 0, o) lms[o + 1 + i] = lms[sa[i]];
 		induced_sort(n, m, s, o, lms + o + 1, ty, cnt, sa);
 	}
-	vector<int> suffix_sort(const auto& str) {
-		using T = std::decay_t<decltype(str[0])>;
+
+	template <typename T>
+	vector<int> suffix_sort(const basic_string<T>& str) {
 		int n = str.size();
 		auto s = str.begin();
         vector<T> t(n + 1);
