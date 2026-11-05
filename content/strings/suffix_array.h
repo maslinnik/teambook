@@ -1,13 +1,11 @@
 /**
  * Author: Vladimir Ragulin
- * Description: Calculates suffix array of the given string.
+ * Description: Sorts cyclic shifts of the given string. To get the actual suffix array, don't forget to push back a zero.
+ * Usage: suffix_array(ranges::subrange(s.begin(), s.end() + 1)) // for suffix array of the std::string
  * Time: O((\max(s) - \min(s)) + n \log n)
  */
 
 vector<int> suffix_array(const auto& s) {
-    // sorts cyclic shifts
-    // don't forget to push back zero if you want an actual suffix array
-    // or pass ranges::subrange(str.begin(), str.end() + 1)
     int n = s.size();
     auto [mn, mx] = minmax_element(s.begin(), s.begin() + n);
     vector<int> c(n), cur(n), sa(n), cnt(max<int>(*mx - *mn + 1, n) + 1);
