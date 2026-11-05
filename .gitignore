@@ -1,6 +1,8 @@
-build/
 .idea/
 .vscode/
+
+.venv/
+.verify-helper/
+
+build/
 teambook.pdf
-.venv
-.verify-helper
